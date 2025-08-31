@@ -1,0 +1,38 @@
+{
+  "defaults": {
+    "db": {
+      "dropdown": ["SQLite"],
+      "default": "SQLite"
+    },
+    "limits": {
+      "timeoutSec": 30,
+      "maxUploadMB": 200
+    },
+    "validations": {
+      "keyUniqueness": true,
+      "nullChecks": true,
+      "typeChecks": true,
+      "valueMismatches": true
+    }
+  },
+  "connections": {
+    "SQLite": {
+      "url": "sqlite:///test_data.sqlite"
+    }
+  },
+  
+  "normalization": {
+  "numeric_majority_threshold": 0.8,
+  "allow_excel_serial_detection": true,
+  "blank_equivalents": ["", "-", "--", "—", "_", "NA", "N/A", "None", "null", "(blank)", "nan"],
+  "collapse_internal_spaces": true,
+  "strip_commas_and_spaces": true,
+  "remove_underscores_in_numbers": false,
+  "treat_parentheses_as_negative": false,
+  "date_format": "%Y-%m-%d",
+  "date_policy": "whitelist",
+  "date_columns": ["effstartdate","effenddate"],
+  "currency_symbols": ["$", "€", "£", "¥", "₹"]
+}
+
+}
